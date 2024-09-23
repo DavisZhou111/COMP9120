@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -14,16 +13,14 @@
     <title>Ability Test</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/templatemo-chain-app-dev.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/ability.css' %}">
-    <script src="{% static 'assets/js/ability.js' %}"></script>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-chain-app-dev.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ability.css') }}">
 </head>
 
 <body>
@@ -33,8 +30,8 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <a href="{% url 'home' %}" class="logo">
-                        <img src="{% static 'assets/images/logo.png' %}" alt="Chain App Dev">
+                    <a href="{{ url_for('home') }}" class="logo">
+                        <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Chain App Dev">
                     </a>
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="/game/start_game" class="active">Home</a></li>
@@ -91,14 +88,14 @@
 </div>
 
 <!-- Scripts -->
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'assets/js/owl-carousel.js' %}"></script>
-<script src="{% static 'assets/js/animation.js' %}"></script>
-<script src="{% static 'assets/js/imagesloaded.js' %}"></script>
-<script src="{% static 'assets/js/popup.js' %}"></script>
-<script src="{% static 'assets/js/custom.js' %}"></script>
-<script src="{% static 'assets/js/ability.js' %}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/animation.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/imagesloaded.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/popup.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/ability.js') }}"></script>
 
 </body>
 </html>
